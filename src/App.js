@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ReactPlayer from 'react-player';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Player = () => {
+    return (
+        <>
+        <h1>Video </h1>
+        <ReactPlayer
+        //url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        url="https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8"
+        muted={true}
+        width="50%"
+        height="50%"
+        controls />
+        </>
+    )
 }
 
-export default App;
+export default Player;
